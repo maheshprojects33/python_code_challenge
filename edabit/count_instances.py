@@ -32,3 +32,22 @@ print(u1.username)
 print(u2.username)
 print(u3.username)
 print(User.user_count)
+
+
+class Composer:
+    count = 0
+    def __init__(self, name, dob, country):
+        self.name = name
+        self.dob = dob
+        self.country = country
+        self.count = Composer.count
+        Composer.count += 1
+print(f"\nOther Similar Challege Solution in same file")
+print(Composer.count) # ➞ 0
+
+c1 = Composer("Ludvig van Beethoven", 1770, "Germany")
+print(Composer.count) # ➞ 1
+
+c2 = Composer("Wolfgang Amadeus Mozart", 1756, "Austria")
+c3 = Composer("Johannes Brahms", 1833, "Germany")
+print(Composer.count) # ➞ 3
